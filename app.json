@@ -4,7 +4,7 @@
    "highlights" : [
       ""
    ],
-   "articleUrl" : "https://software.intel.com/en-us/xdk/docs/intel-xdk-iot-edition-nodejs-templates",
+   "articleUrl" : "https://software.intel.com/en-us/node-js-templates-for-intel-xdk-iot-edition",
    "description" : "A simple node.js application intended to demonstrate how to communicate with SPI devices with Intel(R) IoT platforms such as Intel(R) Edison as the master device.",
    "projectTypeName" : "com.intel.xdk.projecttype.iotapp",
    "title" : "(SPI) Serial Peripheral Interface ",
