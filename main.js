@@ -32,7 +32,7 @@ function char(x) {
 	return parseInt(x, 16); 
 }
 
-var x = new m.SPI(0);
+var x = new m.Spi(0);
 var buf = new Buffer(4);
 buf[0] = char('0xf4');
 buf[1] = char('0x2e');
