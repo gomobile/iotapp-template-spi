@@ -1,5 +1,5 @@
 {
-  "name": "spi",
+  "name": "xdk-iot-spi",
   "description": "",
   "version": "0.0.0",
   "main": "main.js",
