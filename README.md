@@ -1,6 +1,5 @@
-SPI - Serial Peripheral Interface
-=================================
-
+Intel® XDK IoT Node.js\* SPI (Serial Peripheral Interface) App
+==============================================================
 See [LICENSE.md](LICENSE.md) for license terms and conditions.
 
 This sample application is distributed as part of the
