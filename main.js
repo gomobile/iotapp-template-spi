@@ -1,35 +1,42 @@
-/*jslint node:true, vars:true, bitwise:true, unparam:true */
-/*jshint unused:true */
-// Leave the above lines for propper jshinting
-
 /*
-    The Serial Peripheral Interface (SPI) sample application distributed within Intel® XDK IoT Edition under the IoT with Node.js Projects project creation option showcases how to communicate with SPI devices with Intel(R) IoT platforms such as Intel(R) Edison as the master device.
+ * Communicate with I/O devices on the Serial Peripheral Interface (SPI).
+ *
+ * Supported Intel IoT development boards are identified in the code.
+ *
+ * Sends four bytes on MOSI and if connected correctly will yield a four byte
+ * buffer object with the result on MISO and print both. Connect MOSI to MISO
+ * and input should match the result.
+ *
+ * Acceptable parameters to the SPI constructor depends on the number of SPI
+ * buses and chip selects. MRAA considers every chip select on every bus to be
+ * represented by a SPI object. Zero is always the default.
+ *
+ * SPI pins are 10-13 on boards with Arduino compatible I/O headers (e.g., the
+ * Edison and Galileo boards):
+ *
+ *      Pin 10 >> SS
+ *      Pin 11 >> MOSI
+ *      Pin 12 >> MISO
+ *      Pin 13 >> SCK
+ *
+ * See LICENSE.md for license terms and conditions.
+ *
+ * https://software.intel.com/en-us/xdk/docs/using-templates-nodejs-iot
+ */
 
-	This sends 4 bytes on MOSI and if connected correctly will yield a 4 buffer object with the result on MISO and print both. Connect MOSI to MISO and input should match the result
-	Acceptable parameters to the SPI constructor depends on the amount of SPI buses & chip selects you have. Mraa considers every chip select on every bus to be represented by a SPI object. But 0 is always the default.
-	SPI pins are 10/11/12 on an Intel(R) Edison Arduino type board.
-		* Pin 10 >> SS
-		* Pin 11 >> MOSI
-		* Pin 12 >> MISO
-		* Pin 13 >> SCK
-	
-    MRAA - Low Level Skeleton Library for Communication on GNU/Linux platforms
-    Library in C/C++ to interface with Galileo & other Intel platforms, in a structured API with port names/numbering that match compatible boards & with bindings to javascript.
+/* spec jslint and jshint lines for desired JavaScript linting */
+/* see http://www.jslint.com/help.html and http://jshint.com/docs */
+/* jslint node:true */
+/* jshint unused:true */
 
-    Steps for installing MRAA & UPM Library on Intel IoT Platform with IoTDevKit Linux* image and an active internet connection
-    Using a ssh client: 
-	    1. echo "src maa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/intel-iotdk.conf
-	    2. opkg update
-	    3. opkg upgrade
+"use strict" ;
 
-    Article: https://software.intel.com/en-us/node-js-templates-for-intel-xdk-iot-edition
-*/
 
 var m = require('mraa'); //require mraa
 
 // helper function to go from hex val to dec
-function char(x) { 
-	return parseInt(x, 16); 
+function char(x) {
+	return parseInt(x, 16);
 }
 
 var x = new m.Spi(0);
