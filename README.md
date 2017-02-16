@@ -84,7 +84,7 @@ Important Project Files
 -----------------------
 * README.md
 * LICENSE.md
-* <project-name>.xdk
+* \<project-name\>.xdk
 
 Tested IoT Node.js Platforms
 ----------------------------
