@@ -1,5 +1,6 @@
 Intel® XDK IoT Node.js\* SPI (Serial Peripheral Interface) App
 ==============================================================
+
 See [LICENSE.md](LICENSE.md) for license terms and conditions.
 
 This sample application is distributed as part of the
@@ -19,6 +20,7 @@ information regarding the upm sensor and actuator library APIs.
 
 App Overview
 ------------
+
 A simple node.js application intended to demonstrate how to
 communicate with SPI devices with Intel(R) IoT platforms such
 as Intel(R) Edison as the master device.
@@ -75,25 +77,30 @@ SPI pins are 10/11/12/13.
     * Pin 12 >> MISO
     * Pin 13 >> SCK
 
-###Intel(R) Edison
+### Intel(R) Edison
+
 **Reference** : https://www.arduino.cc/en/ArduinoCertified/IntelEdison
 
-###Intel(R) Galileo
+### Intel(R) Galileo
+
 **Reference** : https://www.arduino.cc/en/ArduinoCertified/IntelGalileoGen2
 
 Important App Files
 -------------------
+
 * main.js
 * package.json
 
 Important Project Files
 -----------------------
+
 * README.md
 * LICENSE.md
 * \<project-name\>.xdk
 
 Tested IoT Node.js Platforms
 ----------------------------
+
 * [Intel® Galileo Board for Arduino](http://intel.com/galileo)
 * [Intel® Edison Board for Arduino](http://intel.com/edison)
 
